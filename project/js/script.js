@@ -55,20 +55,26 @@ inp.onkeyup = () => {
     if (inp.value === movieDB.movies[0]) {
         btn.style.backgroundColor = 'red'
         btn.disabled === true
+        btn.style.display = 'none'
     } else if (inp.value === movieDB.movies[1]) {
         btn.style.backgroundColor = 'red'
         btn.disabled === true
+        btn.style.display = 'none'
     } else if (inp.value === movieDB.movies[2]) {
         btn.style.backgroundColor = 'red'
         btn.disabled === true
+        btn.style.display = 'none'
     } else if (inp.value === movieDB.movies[3]) {
         btn.style.backgroundColor = 'red'
         btn.disabled === true
+        btn.style.display = 'none'
     } else if (inp.value === movieDB.movies[4]) {
         btn.style.backgroundColor = 'red'
         btn.disabled === true
+        btn.style.display = 'none'
     } else {
         btn.style.backgroundColor = '#FFD500'
+        btn.style.display = 'block'
     }
 }
 
@@ -83,7 +89,7 @@ function movie() {
         movieDB.movies.push(inp.value);
         console.log(movieDB);
         if (checkInp.checked === true) {
-            movieDB.movies.push(inp.value + 'Избранное');
+            movieDB.movies.push(inp.value + '-любимое');
         }
     }
 }
