@@ -48,5 +48,41 @@ changeImg()
 // homework
 let promoForm = document.forms.login
 let btn = document.querySelector('.add button')
-btn.disabled = true
-console.log(btn);
+let inp = document.querySelector('.add .adding__input')
+let chelInp = document.querySelector('.checkInput')
+
+inp.onkeyup = () => {
+    if (inp.value === movieDB.movies[0]) {
+        btn.style.backgroundColor = 'red'
+        btn.disabled === true
+    } else if (inp.value === movieDB.movies[1]) {
+        btn.style.backgroundColor = 'red'
+        btn.disabled === true
+    } else if (inp.value === movieDB.movies[2]) {
+        btn.style.backgroundColor = 'red'
+        btn.disabled === true
+    } else if (inp.value === movieDB.movies[3]) {
+        btn.style.backgroundColor = 'red'
+        btn.disabled === true
+    } else if (inp.value === movieDB.movies[4]) {
+        btn.style.backgroundColor = 'red'
+        btn.disabled === true
+    } else {
+        btn.style.backgroundColor = '#FFD500'
+    }
+}
+
+
+
+function movie() {
+    promoForm.onsubmit = (event) => {
+        event.preventDefault()
+    }
+
+    btn.onclick = () => {
+        movieDB.movies.push(inp.value);
+        console.log(movieDB);
+    }
+}
+
+movie()
