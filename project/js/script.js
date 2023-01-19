@@ -24,3 +24,29 @@ const movieDB = {
     ]
 };
 
+// 1
+let images = document.querySelectorAll('.promo__adv img');
+
+images.forEach((img) => {
+    img.remove()
+})
+
+
+// 2 
+let genre = document.querySelector('.promo__genre')
+
+genre.innerHTML = 'ДРАМА'
+
+// 3
+let bg = document.querySelector('.promo__bg')
+
+function changeImg() {
+    bg.style.backgroundImage = "url('./img/bg.jpg')"
+}
+changeImg()
+
+// homework
+let promoForm = document.forms.login
+let btn = document.querySelector('.add button')
+btn.disabled = true
+console.log(btn);
