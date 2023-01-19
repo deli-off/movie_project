@@ -49,7 +49,7 @@ changeImg()
 let promoForm = document.forms.login
 let btn = document.querySelector('.add button')
 let inp = document.querySelector('.add .adding__input')
-let chelInp = document.querySelector('.checkInput')
+let checkInp = document.querySelector('.checkInput')
 
 inp.onkeyup = () => {
     if (inp.value === movieDB.movies[0]) {
@@ -82,6 +82,9 @@ function movie() {
     btn.onclick = () => {
         movieDB.movies.push(inp.value);
         console.log(movieDB);
+        if (checkInp.checked === true) {
+            movieDB.movies.push(inp.value + 'Избранное');
+        }
     }
 }
 
